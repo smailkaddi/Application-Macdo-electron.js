@@ -1,0 +1,232 @@
+
+ <!doctype html>
+ <html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <link href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" rel="stylesheet">
+ <link rel="stylesheet" href="Css/index.css">
+ </head>
+ <body>
+     
+ 
+ <div class="nav-side-menu">
+    <div class="brand">Brand Logo</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+ 
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fas fa-tachometer-alt fa-lg"></i> Dashboard
+                  </a>
+                </li>
+ 
+                <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                  <a href= "Categories.html"><i class="fab fa-studiovinari fa-lg"></i>Categories </a>
+                </li>
+                <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                    <a href= "CodePromo.html"><i class="fab fa-studiovinari fa-lg"></i>promo </a>
+                  </li>
+                  <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                    <a href= "products.html"><i class="fab fa-studiovinari fa-lg"></i>products </a>
+                  </li>
+                  <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                    <a href= "SouCategories.html"><i class="fab fa-studiovinari fa-lg"></i>souscategories </a>
+                  </li>
+                  <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                    <a href="tables.html"><i class="fab fa-studiovinari fa-lg"></i> tables </a>
+                  </li>
+                 <li>
+                  <a href="#">
+                  <i class="fas fa-user-tie fa-lg"></i> Profile
+                  </a>
+                  </li>
+ 
+                 <li>
+                  <a href="Login.html">
+                  <i class="fa fa-users fa-lg"></i> Logout
+                  </a>
+                </li>
+            </ul>
+     </div>
+ 
+ 
+ </div>
+ <div class="container"  style="margin-right:0;" >
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Sous Categorie Name</th>
+                        <th scope="col">Categorie Name</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="getSousCategory">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container py-3"  style="margin-left: 20%;">
+    <div class="row" >
+        <div class="card card-outline-secondary" id="addcategory" style="width: 100%;">
+            <div class="card-body">
+                <h3 class="text-center">Categories</h3>
+                <hr>
+                <div id="title">
+
+                </div>
+                <form class="form" role="form" id="formCateg">
+                    <div class="form-group">
+                        <label for="cc_name">Add new Sous categorie</label>
+                        <input class="form-control" name="nom" id="sCateg_name" required="required"
+                            title="Name of category" type="text">
+                    </div>
+                    <hr>
+                    <div class="col-md-12">
+                        <select class="form-control" size="0" id="selectCateg">
+                            <option>
+                                Select Categorie
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <hr>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <button class="btn btn-success btn-lg btn-block" type="submit"
+                                id="add_sous_categ">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+    <script src="backend/sous-categorie.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+ 
+ </body>
+ 
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/caty.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <a href="index.html">
+        <div><button class="backbtn">BACK</button></div>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sous Categorie Name</th>
+                            <th scope="col">Categorie Name</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="getSousCategory">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="card card-outline-secondary" style="margin-top: -19%;" id="addcategory">
+                <div class="card-body">
+                    <h3 class="text-center">Categories</h3>
+                    <hr>
+                    <div id="title">
+
+                    </div>
+                    <form class="form" role="form" id="formCateg">
+                        <div class="form-group">
+                            <label for="cc_name">Add new Sous categorie</label>
+                            <input class="form-control" name="nom" id="sCateg_name" required="required"
+                                title="Name of category" type="text">
+                        </div>
+                        <hr>
+                        <div class="col-md-12">
+                            <select class="form-control" size="0" id="selectCateg">
+                                <option>
+                                    Select Categorie
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <hr>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <button class="btn btn-success btn-lg btn-block" type="submit"
+                                    id="add_sous_categ">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="backend/sous-categorie.js"></script>
+
+
+
+
+    </ul>
+    </div>
+
+
+ -->
+

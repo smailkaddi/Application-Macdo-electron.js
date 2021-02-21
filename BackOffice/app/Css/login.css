@@ -1,0 +1,53 @@
+body {
+  position: fixed;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+
+main {
+  height: -webkit-fill-available;
+  background-image: url("../img/pg.jpg");
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.card {
+  border: 0;
+}
+
+.card-title {
+  color: #0f4c75;
+}
+
+.card-body {
+  color: #0f4c75;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #0f4c75;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #0f4c75;
+  color: #fff;
+  border: 0;
+}
+
+#registrate {
+  color: #0f4c75;
+  font-weight: 700;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  color: #3282b8;
+}

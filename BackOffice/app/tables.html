@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="Css/index.css">
+</head>
+<body>
+    
+
+<div class="nav-side-menu">
+   <div class="brand">Brand Logo</div>
+   <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+       <div class="menu-list">
+ 
+           <ul id="menu-content" class="menu-content collapse out">
+               <li>
+                 <a href="#">
+                 <i class="fas fa-tachometer-alt fa-lg"></i> Dashboard
+                 </a>
+               </li>
+
+               <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                 <a href= "Categories.html"><i class="fab fa-studiovinari fa-lg"></i>Categories </a>
+               </li>
+               <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href= "CodePromo.html"><i class="fab fa-studiovinari fa-lg"></i>promos </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href= "products.html"><i class="fab fa-studiovinari fa-lg"></i>products </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href= "SouCategories.html"><i class="fab fa-studiovinari fa-lg"></i>souscategories </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed active ">
+                   <a href="tables.html"><i class="fab fa-studiovinari fa-lg"></i> tables </a>
+                 </li>
+                <li>
+                 <a href="#">
+                 <i class="fas fa-user-tie fa-lg"></i> Profile
+                 </a>
+                 </li>
+
+                <li>
+                 <a href="Login.html">
+                 <i class="fa fa-users fa-lg"></i> Logout
+                 </a>
+               </li>
+           </ul>
+    </div>
+
+
+</div>
+
+<div class="container" style="margin-right:0;">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">numTable</th>
+                        <th scope="col">isOcuped</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="GetDataTableService">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+$    <div class="container py-3">
+    <div class="row" style="margin-left: 12%;">
+        <div class="card card-outline-secondary"  style="width: 100%;" id="addcategory">
+            <div class="card-body">
+                <h3 class="text-center" id="title">Categories</h3>
+                <hr>
+                <div id="title">
+
+                </div>
+                <form class="form" role="form" id="formCateg">
+                    <div class="form-group">
+                        <label for="cc_name">Add new table</label>
+                        <input class="form-control" id="tableMatricul" required="required" title="tableMatricul"
+                            type="number">
+                    </div>
+                    <hr>
+                    <div class="col-md-12">
+                        <label for="cc_name">Add visble</label>
+                        <select class="form-control" size="0" id="tableStatus">
+
+                            <option>
+                                Table status
+                            </option>
+                            <option value="true">available</option>
+                            <option value="false">unavailable</option>
+
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <button class="btn btn-success btn-lg btn-block" type="submit"
+                                id="addTable">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <script src="backend/service-table.js"></script>
+   <script src="plugins/jquery/jquery.min.js"></script>
+   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+   <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+   <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+</body>

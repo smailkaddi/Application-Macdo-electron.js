@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="col-6 offset-lg-9 panel h-100 py-5">
+            <div class="card">
+                <h1 class="card-title text-center mb-4">Admin</h1>
+                <form id="loginForm" class="card-body">
+                    <div class="form-group">
+                        <input type="text" name="text"  class="form-control"
+                            placeholder="Username" required id="userEmail">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control"
+                            placeholder="Password" required id="userPassword">
+                    </div>
+                    <div class="form-group text-center pt-4">
+                        <input type="submit" value="Welcome" class="btn btn-primary w-100">
+                    </div>
+
+                </form>
+            </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (e) {
+                e.preventDefault();
+                if ($("#userEmail").val() != '' && $("#userPassword").val() != '') {
+                    if ($("#userEmail").val() == 'admin' && $("#userPassword").val() == 'admin') {
+                        window.location.href = 'Categories.html';
+                    } else {
+                        alert('invalid username password');
+                        location.reload()
+                    }
+                } else {
+                    alert('username or password cann\'t be blank');
+                    location.reload()
+                }
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

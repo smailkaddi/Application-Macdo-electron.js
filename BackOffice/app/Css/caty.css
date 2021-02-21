@@ -1,0 +1,48 @@
+.container {
+    padding: 2rem 0rem;
+    margin: 17%;
+    margin-top: 2%;
+}
+
+h4 {
+    margin: 2rem 0rem 1rem;
+}
+
+.table-image td,
+th {
+    vertical-align: middle;
+}
+
+body {
+    background-color: #10151B;
+    background: url("../img/bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.backbtn {
+    margin: 0 auto;
+    width: 170px;
+    border: 2px solid #66fcf1;
+    border-radius: 2px;
+    background: none;
+    font-size: 16px;
+    line-height: 54px;
+    color: #fff;
+    letter-spacing: .25em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    -moz-appearance: none;
+    float: left;
+    margin-top: -1%;
+}
+
+.backbtn:hover {
+    background: #66fcf1;
+    color: #10151B;
+}

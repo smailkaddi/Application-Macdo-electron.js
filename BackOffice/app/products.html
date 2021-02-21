@@ -1,0 +1,168 @@
+
+
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="Css/index.css">
+</head>
+<body>
+    
+
+<div class="nav-side-menu">
+   <div class="brand">Brand Logo</div>
+   <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+       <div class="menu-list">
+ 
+           <ul id="menu-content" class="menu-content collapse out">
+               <li>
+                 <a href="#">
+                 <i class="fas fa-tachometer-alt fa-lg"></i> Dashboard
+                 </a>
+               </li>
+
+               <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                 <a href= "Categories.html"><i class="fab fa-studiovinari fa-lg"></i>Categories </a>
+               </li>
+               <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href= "CodePromo.html"><i class="fab fa-studiovinari fa-lg"></i>promo </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                   <a href= "products.html"><i class="fab fa-studiovinari fa-lg"></i>products </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href= "SouCategories.html"><i class="fab fa-studiovinari fa-lg"></i>souscategories </a>
+                 </li>
+                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
+                   <a href="tables.html"><i class="fab fa-studiovinari fa-lg"></i> tables </a>
+                 </li>
+                <li>
+                 <a href="#">
+                 <i class="fas fa-user-tie fa-lg"></i> Profile
+                 </a>
+                 </li>
+
+                <li>
+                 <a href="Login.html">
+                 <i class="fa fa-users fa-lg"></i> Logout
+                 </a>
+               </li>
+           </ul>
+    </div>
+
+
+</div>
+<div class="container"   style="margin-right:0;" >
+  <div class="row">
+      <div class="col-12">
+          <table class="table table-bordered table-dark">
+              <thead>
+                  <tr>
+                      <th scope="col">picname</th>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">prix</th>
+                      <th scope="col">ingrediens</th>
+                      <th scope="col">codePromo</th>
+                      <th scope="col">Point Fidelite</th>
+                      <th scope="col">sousCategory</th>
+                      <th scope="col" width=auto>Actions</th>
+                  </tr>
+              </thead>
+              <tbody id="getProduct">
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+<div class="container py-3">
+  <div class="row" style="margin-left: 12%;">
+      <div class="card card-outline-secondary" style="width: 100%;">
+          <div class="card-body">
+              <h3 class="text-center">Add new product</h3>
+              <hr>
+              <div id="title">
+
+              </div>
+              <form class="form" role="form" id="formCateg">
+                  <div class="form-group">
+                      <label for="cc_name">Add new nom</label>
+                      <input class="form-control" name="nom" id="productName" required="required"
+                          title="productName" type="text">
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                      <label for="cc_name">Add new prix</label>
+                      <input class="form-control" name="nom" id="productPrice" required="required"
+                          title="productPrice" type="text">
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                      <label for="cc_name">Add new ingrediens</label>
+                      <input class="form-control" name="nom" id="ingrediens" required="required"
+                          title="ingrediens" type="text">
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                      <label for="cc_name">Add new codePromo</label>
+                      <select class="form-control" size="0" id="tablecodepromo">
+
+                          <option>
+                              Table codepromo
+                          </option>
+
+                      </select>
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                      <label for="cc_name">Add new picname</label>
+                      <input class="form-control" name="nom" id="productpicname" required="required"
+                       title="productpicname" type="text">
+                  </div>
+                  <hr>
+                  <div class="col-md-12">
+                      <label for="cc_name">Add sousCategory</label>
+                      <select class="form-control" size="0" id="sousCategID">
+                          <option>
+                              Select sous categorie
+                          </option>
+                      </select>
+                  </div>
+                  <hr>
+                  <div class="form-group row">
+                      <div class="col-md-6">
+                          <button class="btn btn-success btn-lg btn-block" type="submit"
+                           id="add_product">Submit</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+</ul>
+</div>
+
+
+   <script src="backend/product.js"></script>
+   <script src="plugins/jquery/jquery.min.js"></script>
+   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+   <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+   <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+</body>
